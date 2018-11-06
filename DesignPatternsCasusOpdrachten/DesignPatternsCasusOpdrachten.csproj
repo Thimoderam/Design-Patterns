@@ -42,17 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Week 1\Aangepast\Kassabon.cs" />
+    <Compile Include="Week 1\Aangepast\Korting.cs" />
+    <Compile Include="Week 1\Aangepast\NaturelVoorTweeEuroKorting.cs" />
+    <Compile Include="Week 1\Aangepast\Pannenkoek.cs" />
+    <Compile Include="Week 1\Aangepast\TestKassabon.cs" />
+    <Compile Include="Week 1\Aangepast\TweedeHalvePrijsKorting.cs" />
+    <Compile Include="Week 1\Aangepast\VijftienProcentOpTotaalKorting.cs" />
     <Compile Include="Week 1\Origineel\Kassabon.cs" />
     <Compile Include="Week 1\Origineel\Pannenkoek.cs" />
-    <Compile Include="Week 1\Origineel\Program.cs" />
+    <Compile Include="Week 1\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Week 1\Origineel\TestKassabon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Week 1\Aangepast\" />
+    <Content Include="Week 1\Diagrammen\Pannekoekenhuis Casus Week 1 aangepast.png" />
+    <Content Include="Week 1\Diagrammen\Pannekoekenhuis Casus Week 1 origineel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -55,6 +55,12 @@
     <Compile Include="Week 1\Quack.cs" />
     <Compile Include="Week 1\QuackBehavior.cs" />
     <Compile Include="Week 1\Squeek.cs" />
+    <Compile Include="Week2\Hoofdstuk 2\CurrentConditionsDisplay.cs" />
+    <Compile Include="Week2\Hoofdstuk 2\ForecastDisplay.cs" />
+    <Compile Include="Week2\Hoofdstuk 2\IDisplay.cs" />
+    <Compile Include="Week2\Hoofdstuk 2\MeasurementChangedListener.cs" />
+    <Compile Include="Week2\Hoofdstuk 2\StatisticsDisplay.cs" />
+    <Compile Include="Week2\Hoofdstuk 2\WeatherData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

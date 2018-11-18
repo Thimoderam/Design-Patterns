@@ -50,7 +50,7 @@
     <Compile Include="Week 1\MallardDuck.cs" />
     <Compile Include="Week 1\ModelDuck.cs" />
     <Compile Include="Week 1\MuteQuack.cs" />
-    <Compile Include="Week 1\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Week 1\Quack.cs" />
     <Compile Include="Week 1\QuackBehavior.cs" />
@@ -61,6 +61,12 @@
     <Compile Include="Week2\Hoofdstuk 2\MeasurementChangedListener.cs" />
     <Compile Include="Week2\Hoofdstuk 2\StatisticsDisplay.cs" />
     <Compile Include="Week2\Hoofdstuk 2\WeatherData.cs" />
+    <Compile Include="Week2\Hoofdstuk 3\Beverage.cs" />
+    <Compile Include="Week2\Hoofdstuk 3\CondimentDecorator.cs" />
+    <Compile Include="Week2\Hoofdstuk 3\Espresso.cs" />
+    <Compile Include="Week2\Hoofdstuk 3\HouseBlend.cs" />
+    <Compile Include="Week2\Hoofdstuk 3\Mocha.cs" />
+    <Compile Include="Week2\Hoofdstuk 3\Whip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

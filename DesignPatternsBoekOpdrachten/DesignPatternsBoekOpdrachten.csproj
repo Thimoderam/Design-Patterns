@@ -55,6 +55,20 @@
     <Compile Include="Week 1\Quack.cs" />
     <Compile Include="Week 1\QuackBehavior.cs" />
     <Compile Include="Week 1\Squeek.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\PizzaStore\CHPizzaStore.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\CheesePizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\CHCheesePizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\CHPepperoniPizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\CHVeggiePizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\NYCheesePizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\NYPepperoniPizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\PizzaStore\NYPizzaStore.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\NYVeggiePizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\PepperoniPizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\Pizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\PizzaStore\PizzaStore.cs" />
+    <Compile Include="Week 3\Hoofdstuk 4\Pizza\VeggiePizza.cs" />
+    <Compile Include="Week 3\Hoofdstuk 5\MySingleton.cs" />
     <Compile Include="Week2\Hoofdstuk 2\CurrentConditionsDisplay.cs" />
     <Compile Include="Week2\Hoofdstuk 2\ForecastDisplay.cs" />
     <Compile Include="Week2\Hoofdstuk 2\IDisplay.cs" />
@@ -67,9 +81,13 @@
     <Compile Include="Week2\Hoofdstuk 3\HouseBlend.cs" />
     <Compile Include="Week2\Hoofdstuk 3\Mocha.cs" />
     <Compile Include="Week2\Hoofdstuk 3\Whip.cs" />
+    <Compile Include="Week2\Hoofdstuk 7\Duck.cs" />
+    <Compile Include="Week2\Hoofdstuk 7\Turkey.cs" />
+    <Compile Include="Week2\Hoofdstuk 7\TurkeyAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,12 @@
 using DesignPatternsBoekOpdrachten.Week_1;
+using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4;
+using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5;
 using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3;
+using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7;
 using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk2;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DesignPatternsBoekOpdrachten
 {
@@ -9,13 +14,13 @@ namespace DesignPatternsBoekOpdrachten
     {
         static void Main(string[] args)
         {
-            RunHoofdstuk3();
+            RunHoofdstuk5();
             Console.ReadKey();
         }
 
         static void RunHoofdstuk1()
         {
-            Duck model = new ModelDuck();
+            Week_1.Duck model = new ModelDuck();
             model.PerformFly();
             model.PerformQuack();
             model.SetFlyBehavior(new FlyRocketPowered());
@@ -41,6 +46,50 @@ namespace DesignPatternsBoekOpdrachten
             beverage1 = new Whip(beverage1);
             Console.WriteLine($"{beverage1.GetDescription()} ${beverage1.Cost()}");
 
+        }
+
+        static void RunHoofdstuk7()
+        {
+            Week2.Hoofdstuk_7.Duck duck = new Week2.Hoofdstuk_7.Duck();
+            Turkey turkey = new Turkey();
+            TurkeyAdapter adapter = new TurkeyAdapter(turkey);   //Should be of type Duck if duck was the implemented interface. (Duck adapter = new TurkeyAdapter(turkey);
+            adapter.Quack();
+            adapter.Fly();
+        }
+
+        static void RunHoofdstuk4()
+        {
+            Console.WriteLine(@"------------------------------------------------------");
+            Console.WriteLine("\tPizza Store Factory Pattern Test");
+            Console.WriteLine(@"------------------------------------------------------");
+            PizzaStore chicagoPizzaStore = new CHPizzaStore();
+            PizzaStore newYorkPizzaStore = new NYPizzaStore();
+            chicagoPizzaStore.OrderPizza("Cheese");
+            Console.WriteLine("........................................");
+            chicagoPizzaStore.OrderPizza("Veggie");
+            Console.WriteLine("........................................");
+            chicagoPizzaStore.OrderPizza("Pepperoni");
+            Console.WriteLine("\n-----------------------------------------\n");
+            newYorkPizzaStore.OrderPizza("Cheese");
+            Console.WriteLine("........................................");
+            newYorkPizzaStore.OrderPizza("Veggie");
+            Console.WriteLine("........................................");
+            newYorkPizzaStore.OrderPizza("Pepperoni");
+            Console.WriteLine(@"------------------------------------------------------");
+        }
+
+        static void RunHoofdstuk5()
+        {
+            MySingleton singleton = MySingleton.Instance;
+            singleton.PrintText();
+            Task.Run(() =>
+            {
+                Thread.Sleep(800);
+                MySingleton singleton2 = MySingleton.Instance;
+                singleton2.PrintText();
+            });
+            MySingleton singleton3 = MySingleton.Instance;
+            singleton3.PrintText();
         }
     }
 }

@@ -1,6 +1,7 @@
 using DesignPatternsBoekOpdrachten.Week_1;
 using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4;
 using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5;
+using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_6;
 using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3;
 using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7;
 using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk2;
@@ -14,7 +15,7 @@ namespace DesignPatternsBoekOpdrachten
     {
         static void Main(string[] args)
         {
-            RunHoofdstuk5();
+            RunHoofdstuk6();
             Console.ReadKey();
         }
 
@@ -90,6 +91,11 @@ namespace DesignPatternsBoekOpdrachten
             });
             MySingleton singleton3 = MySingleton.Instance;
             singleton3.PrintText();
+        }
+
+        static void RunHoofdstuk6()
+        {
+            RemoteControlTest test = new RemoteControlTest();
         }
     }
 }

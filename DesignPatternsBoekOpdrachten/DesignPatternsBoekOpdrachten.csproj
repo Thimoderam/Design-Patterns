@@ -69,6 +69,17 @@
     <Compile Include="Week 3\Hoofdstuk 4\PizzaStore\PizzaStore.cs" />
     <Compile Include="Week 3\Hoofdstuk 4\Pizza\VeggiePizza.cs" />
     <Compile Include="Week 3\Hoofdstuk 5\MySingleton.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\Command.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\GarageDoor.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\GarageDoorCloseCommand.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\GarageDoorOpenCommand.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\Light.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\LightOffCommand.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\LightOnCommand.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\NoCommand.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\RemoteControl.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\RemoteControlTest.cs" />
+    <Compile Include="Week 4\Hoofdstuk 6\SimpleRemoteControl.cs" />
     <Compile Include="Week2\Hoofdstuk 2\CurrentConditionsDisplay.cs" />
     <Compile Include="Week2\Hoofdstuk 2\ForecastDisplay.cs" />
     <Compile Include="Week2\Hoofdstuk 2\IDisplay.cs" />

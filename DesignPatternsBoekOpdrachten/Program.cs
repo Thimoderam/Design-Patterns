@@ -8,6 +8,7 @@ using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk2;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10;
 
 namespace DesignPatternsBoekOpdrachten
 {
@@ -15,7 +16,7 @@ namespace DesignPatternsBoekOpdrachten
     {
         static void Main(string[] args)
         {
-            RunHoofdstuk6();
+            RunHoofdstuk10();
             Console.ReadKey();
         }
 
@@ -96,6 +97,11 @@ namespace DesignPatternsBoekOpdrachten
         static void RunHoofdstuk6()
         {
             RemoteControlTest test = new RemoteControlTest();
+        }
+
+        static void RunHoofdstuk10()
+        {
+            new GumballMachineTest();
         }
     }
 }

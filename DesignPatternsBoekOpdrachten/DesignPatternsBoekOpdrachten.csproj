@@ -69,6 +69,14 @@
     <Compile Include="Week 3\Hoofdstuk 4\PizzaStore\PizzaStore.cs" />
     <Compile Include="Week 3\Hoofdstuk 4\Pizza\VeggiePizza.cs" />
     <Compile Include="Week 3\Hoofdstuk 5\MySingleton.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\GumballMachine.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\GumballMachineTest.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\HasQuarterState.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\NoQuarterState.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\SoldOutState.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\SoldState.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\State.cs" />
+    <Compile Include="Week 4\Hoofdstuk 10\WinnerState.cs" />
     <Compile Include="Week 4\Hoofdstuk 6\Command.cs" />
     <Compile Include="Week 4\Hoofdstuk 6\GarageDoor.cs" />
     <Compile Include="Week 4\Hoofdstuk 6\GarageDoorCloseCommand.cs" />

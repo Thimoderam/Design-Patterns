@@ -4,8 +4,8 @@ namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5
 {
     public class MySingleton
     {
-        private volatile static MySingleton instance;
-        private static object block = new object();
+        private static volatile MySingleton _instance;
+        private static readonly object Block = new object();
 
         private MySingleton()
         {
@@ -15,17 +15,15 @@ namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5
         {
             get
             {
-                if (instance == null)
+                if (_instance != null) return _instance;
+                lock (Block)
                 {
-                    lock (block)
+                    if (_instance == null)
                     {
-                        if (instance == null)
-                        {
-                            instance = new MySingleton();
-                        }
+                        _instance = new MySingleton();
                     }
                 }
-                return instance;
+                return _instance;
             }
         }
         public void PrintText()

@@ -1,25 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DesignPatternsCasusOpdrachten.Week_1.Aangepast
 {
-    class VijftienProcentOpTotaalKorting : Korting
+    internal class VijftienProcentOpTotaalKorting : Korting
     {
         public double GetKorting(List<Pannenkoek> pannenkoeken)
         {
-            List<double> prijzen = new List<double>();
-            foreach(Pannenkoek p in pannenkoeken)
-            {
-                prijzen.Add(p.Prijs());
-            }
+            var prijzen = new List<double>();
+            foreach (var p in pannenkoeken) prijzen.Add(p.Prijs());
             double totaal = 0;
-            foreach(double d in prijzen)
-            {
-                totaal += d;
-            }
+            foreach (var d in prijzen) totaal += d;
             return totaal * 0.15;
         }
     }

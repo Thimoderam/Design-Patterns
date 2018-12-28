@@ -11,6 +11,7 @@ namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5
         {
             Console.WriteLine("Singleton created!");
         }
+
         public static MySingleton Instance
         {
             get
@@ -18,14 +19,13 @@ namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5
                 if (_instance != null) return _instance;
                 lock (Block)
                 {
-                    if (_instance == null)
-                    {
-                        _instance = new MySingleton();
-                    }
+                    if (_instance == null) _instance = new MySingleton();
                 }
+
                 return _instance;
             }
         }
+
         public void PrintText()
         {
             Console.WriteLine("I am a Singleton!");

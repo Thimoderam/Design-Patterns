@@ -4,8 +4,8 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_6
 {
     public class RemoteControl
     {
-        private Command[] onCommands;
-        private Command[] offCommands;
+        private readonly Command[] offCommands;
+        private readonly Command[] onCommands;
         private Command undoCommand;
 
         public RemoteControl()
@@ -14,40 +14,44 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_6
             offCommands = new Command[7];
 
             Command noCommand = new NoCommand();
-            for (int i = 0; i < 7; i++)
+            for (var i = 0; i < 7; i++)
             {
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
+
             undoCommand = noCommand;
         }
+
         public void SetCommand(int slot, Command onCommand, Command offCommand)
         {
             onCommands[slot] = onCommand;
             offCommands[slot] = offCommand;
         }
+
         public void OnButtonWasPushed(int slot)
         {
             onCommands[slot].Execute();
             undoCommand = onCommands[slot];
         }
+
         public void OffButtonWasPushed(int slot)
         {
             offCommands[slot].Execute();
             undoCommand = offCommands[slot];
         }
+
         public void UndoButtonWasPushed()
         {
             undoCommand.Undo();
         }
+
         public override string ToString()
         {
-            StringBuilder builder = new StringBuilder();
+            var builder = new StringBuilder();
             builder.Append("\n------ Remote Control -------\n");
-            for (int i = 0; i < onCommands.Length; i++)
-            {
+            for (var i = 0; i < onCommands.Length; i++)
                 builder.Append($"[slot {i}] {onCommands[i].GetType().Name} : {offCommands[i].GetType().Name}\n");
-            }
             return builder.ToString();
         }
     }

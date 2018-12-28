@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
 {
@@ -10,7 +6,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
     {
         public GumballMachineTest()
         {
-            GumballMachine gumballMachine = new GumballMachine(5);
+            var gumballMachine = new GumballMachine(5);
             Console.WriteLine(gumballMachine);
             gumballMachine.InsertQuarter();
             gumballMachine.TurnCrank();

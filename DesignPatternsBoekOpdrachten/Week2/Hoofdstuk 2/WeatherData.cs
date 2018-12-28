@@ -1,26 +1,52 @@
 ﻿using System.Collections.Generic;
 
-namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk2
+namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_2
 {
-    class WeatherData
+    public class WeatherData
     {
-        private double temperature;
-        private double humidity;
+        private readonly List<IMeasurementChangedListener> listeners;
         private double barometricPressure;
-        private List<IMeasurementChangedListener> listeners;
+        private double humidity;
+        private double temperature;
+
         public WeatherData()
         {
             listeners = new List<IMeasurementChangedListener>();
         }
-        public double Temperature { get { return 22.5; } set { temperature = value; MeasurementChanged(); } }
-        public double Humidity { get { return 70.5; } set { humidity = value; MeasurementChanged(); } }
-        public double BarometricPressure { get { return 20.3; } set { barometricPressure = value; MeasurementChanged(); } }
-        public void MeasurementChanged()
+
+        public double Temperature
         {
-            foreach (IMeasurementChangedListener listener in listeners)
+            get => 22.5;
+            set
             {
-                listener.OnMeasurementChanged(this);
+                temperature = value;
+                MeasurementChanged();
             }
+        }
+
+        public double Humidity
+        {
+            get => 70.5;
+            set
+            {
+                humidity = value;
+                MeasurementChanged();
+            }
+        }
+
+        public double BarometricPressure
+        {
+            get => 20.3;
+            set
+            {
+                barometricPressure = value;
+                MeasurementChanged();
+            }
+        }
+
+        private void MeasurementChanged()
+        {
+            foreach (var listener in listeners) listener.OnMeasurementChanged(this);
         }
 
         public void AddListener(IMeasurementChangedListener listener)

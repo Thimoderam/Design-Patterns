@@ -1,9 +1,9 @@
 ﻿namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7
 {
-    class TurkeyAdapter
+    public class TurkeyAdapter
     {
         //Should extend Duck so duck methods can be called aswell. However in this code Duck is not an interface.
-        private Turkey turkey;
+        private readonly Turkey turkey;
 
         public TurkeyAdapter(Turkey turkey)
         {
@@ -14,9 +14,10 @@
         {
             turkey.Gobble();
         }
+
         public void Fly()
         {
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
                 turkey.Fly();
         }
     }

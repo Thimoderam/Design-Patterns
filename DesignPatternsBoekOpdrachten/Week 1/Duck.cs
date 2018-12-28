@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatternsBoekOpdrachten.Week_1
 {
     public abstract class Duck
     {
-        FlyBehavior flyBehavior;
-        QuackBehavior quackBehavior;
-        public Duck()
-        {
-        }
+        private FlyBehavior flyBehavior;
+        private QuackBehavior quackBehavior;
+
         public abstract void Display();
 
         public void PerformFly()
@@ -24,6 +18,7 @@ namespace DesignPatternsBoekOpdrachten.Week_1
         {
             quackBehavior.Quack();
         }
+
         public void Swim()
         {
             Console.WriteLine("All ducks float, even decoys!");
@@ -34,10 +29,9 @@ namespace DesignPatternsBoekOpdrachten.Week_1
             this.flyBehavior = flyBehavior;
         }
 
-        public void SetQuackBehavior(QuackBehavior quackBehavior)
+        protected void SetQuackBehavior(QuackBehavior quackBehavior)
         {
             this.quackBehavior = quackBehavior;
         }
-
     }
 }

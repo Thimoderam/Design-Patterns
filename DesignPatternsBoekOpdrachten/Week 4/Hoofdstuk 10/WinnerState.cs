@@ -4,16 +4,18 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
 {
     public class WinnerState : State
     {
-        private readonly GumballMachine gumballMachine;
         private const string StateName = "WinnerState";
+        private readonly GumballMachine gumballMachine;
+
         public WinnerState(GumballMachine gumballMachine)
         {
             this.gumballMachine = gumballMachine;
         }
+
         public void Dispense()
         {
             gumballMachine.ReleaseBall();
-            if(gumballMachine.GetCount() > 0)
+            if (gumballMachine.GetCount() > 0)
             {
                 gumballMachine.SetState(gumballMachine.GetSoldOutState());
             }
@@ -21,7 +23,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
             {
                 gumballMachine.ReleaseBall();
                 Console.WriteLine("YOU'RE A WINNER! You got two gumballs for your quarter.");
-                if(gumballMachine.GetCount() > 0)
+                if (gumballMachine.GetCount() > 0)
                 {
                     gumballMachine.SetState(gumballMachine.GetNoQuarterState());
                 }
@@ -47,6 +49,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
         {
             Console.WriteLine("You have already turned the crank.");
         }
+
         public override string ToString()
         {
             return StateName;

@@ -4,13 +4,14 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
 {
     public class GumballMachine
     {
-        private readonly State soldOutState;
-        private readonly State noQuarterState;
         private readonly State hasQuarterState;
+        private readonly State noQuarterState;
+        private readonly State soldOutState;
         private readonly State soldState;
         private readonly State winnerState;
         private State currentState;
         private int gumballCount;
+
         public GumballMachine(int numberOfGumballs)
         {
             soldOutState = new SoldOutState();
@@ -19,25 +20,25 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
             soldState = new SoldState(this);
             winnerState = new WinnerState(this);
             gumballCount = numberOfGumballs;
-            if (gumballCount > 0)
-                currentState = noQuarterState;
-            else
-                currentState = soldOutState;
+            currentState = gumballCount > 0 ? noQuarterState : soldOutState;
         }
 
         public void InsertQuarter()
         {
             currentState.InsertQuarter();
         }
+
         public void EjectQuarter()
         {
             currentState.EjectQuarter();
         }
+
         public void TurnCrank()
         {
             currentState.TurnCrank();
             currentState.Dispense();
         }
+
         public void SetState(State state)
         {
             currentState = state;
@@ -46,10 +47,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
         public void ReleaseBall()
         {
             Console.WriteLine("A gumball comes rolling out of the slot....");
-            if (gumballCount > 0)
-            {
-                gumballCount--;
-            }
+            if (gumballCount > 0) gumballCount--;
         }
 
         public State GetSoldOutState()
@@ -71,6 +69,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
         {
             return soldState;
         }
+
         public State GetWinnerState()
         {
             return winnerState;
@@ -88,7 +87,8 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
 
         public override string ToString()
         {
-            return $"{nameof(soldOutState)}: {soldOutState}, {nameof(noQuarterState)}: {noQuarterState}, {nameof(hasQuarterState)}: {hasQuarterState}, {nameof(soldState)}: {soldState}, {nameof(winnerState)}: {winnerState}, {nameof(currentState)}: {currentState}, {nameof(gumballCount)}: {gumballCount}";
+            return
+                $"{nameof(soldOutState)}: {soldOutState}, {nameof(noQuarterState)}: {noQuarterState}, {nameof(hasQuarterState)}: {hasQuarterState}, {nameof(soldState)}: {soldState}, {nameof(winnerState)}: {winnerState}, {nameof(currentState)}: {currentState}, {nameof(gumballCount)}: {gumballCount}";
         }
     }
 }

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatternsBoekOpdrachten.Week_1
 {
-    class Quack : QuackBehavior
+    internal class Quack : QuackBehavior
     {
         void QuackBehavior.Quack()
         {

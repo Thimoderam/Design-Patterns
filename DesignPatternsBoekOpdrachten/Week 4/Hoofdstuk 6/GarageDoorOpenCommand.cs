@@ -2,11 +2,13 @@
 {
     public class GarageDoorOpenCommand : Command
     {
-        private GarageDoor door;
+        private readonly GarageDoor door;
+
         public GarageDoorOpenCommand(GarageDoor door)
         {
             this.door = door;
         }
+
         public void Execute()
         {
             door.Open();

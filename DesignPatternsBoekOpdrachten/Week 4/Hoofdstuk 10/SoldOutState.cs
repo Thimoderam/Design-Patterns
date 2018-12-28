@@ -5,6 +5,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
     public class SoldOutState : State
     {
         private const string StateName = "SoldOutState";
+
         public void Dispense()
         {
             Console.WriteLine("Can't dispense, out of gumballs.");
@@ -24,6 +25,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
         {
             Console.WriteLine("The gumballs are sold out.");
         }
+
         public override string ToString()
         {
             return StateName;

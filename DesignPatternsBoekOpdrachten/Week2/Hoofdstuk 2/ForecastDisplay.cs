@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk2
+namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_2
 {
-    class ForecastDisplay : IMeasurementChangedListener, IDisplay
+    internal class ForecastDisplay : IMeasurementChangedListener, IDisplay
     {
         public ForecastDisplay(WeatherData data)
         {

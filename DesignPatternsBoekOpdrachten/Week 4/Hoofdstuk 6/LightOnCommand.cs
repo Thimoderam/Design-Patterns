@@ -2,7 +2,7 @@
 {
     public class LightOnCommand : Command
     {
-        private Light light;
+        private readonly Light light;
 
         public LightOnCommand(Light light)
         {

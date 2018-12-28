@@ -1,16 +1,16 @@
-﻿namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4
+﻿namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.PizzaStore
 {
     public abstract class PizzaStore
     {
-        public abstract Pizza CreatePizza(string item);
+        protected abstract Pizza.Pizza CreatePizza(string item);
+
         public void OrderPizza(string item)
         {
-            Pizza pizza = CreatePizza(item);
+            var pizza = CreatePizza(item);
             pizza.Prepare();
             pizza.Bake();
             pizza.Cut();
             pizza.Box();
         }
-
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
 
-namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4
+namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.Pizza
 {
-    class CHPepperoniPizza : PepperoniPizza
+    internal class CHPepperoniPizza : PepperoniPizza
     {
-        private string style = " in the Chicago style.\n";
+        private readonly string style = " in the Chicago style.\n";
+
         public override void Bake()
         {
             base.Bake();
@@ -16,11 +17,13 @@ namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4
             base.Box();
             Console.Write(style);
         }
+
         public override void Cut()
         {
             base.Cut();
             Console.Write(style);
         }
+
         public override void Prepare()
         {
             base.Prepare();

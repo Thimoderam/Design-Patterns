@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.Pizza;
 
-namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4
+namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.PizzaStore
 {
-    class CHPizzaStore : PizzaStore
+    internal class CHPizzaStore : PizzaStore
     {
-        public override Pizza CreatePizza(string item)
+        protected override Pizza.Pizza CreatePizza(string item)
         {
             switch (item)
             {

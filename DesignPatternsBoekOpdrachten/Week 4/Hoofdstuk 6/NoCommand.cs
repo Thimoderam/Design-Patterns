@@ -2,8 +2,12 @@
 {
     public class NoCommand : Command
     {
-        public void Execute() { }
+        public void Execute()
+        {
+        }
 
-        public void Undo() { }
+        public void Undo()
+        {
+        }
     }
 }

@@ -4,12 +4,14 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
 {
     public class SoldState : State
     {
-        private readonly GumballMachine gumballMachine;
         private const string StateName = "SoldState";
+        private readonly GumballMachine gumballMachine;
+
         public SoldState(GumballMachine gumballMachine)
         {
             this.gumballMachine = gumballMachine;
         }
+
         public void Dispense()
         {
             gumballMachine.ReleaseBall();
@@ -38,6 +40,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
         {
             Console.WriteLine("Turning twice doesn't get you another gumball!");
         }
+
         public override string ToString()
         {
             return StateName;

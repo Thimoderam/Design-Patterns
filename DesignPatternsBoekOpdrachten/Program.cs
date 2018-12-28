@@ -1,44 +1,54 @@
-using DesignPatternsBoekOpdrachten.Week_1;
-using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4;
-using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5;
-using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_6;
-using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3;
-using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7;
-using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk2;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_2;
+using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3;
+using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7;
+using DesignPatternsBoekOpdrachten.Week_1;
+using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.PizzaStore;
+using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5;
 using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10;
+using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_6;
+using DesignPatternsBoekOpdrachten.Week_5_en_6;
+using Duck = DesignPatternsBoekOpdrachten.Week_1.Duck;
 
 namespace DesignPatternsBoekOpdrachten
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            RunHoofdstuk10();
+//            RunHoofdstuk1();
+//            RunHoofdstuk2();
+//            RunHoofdstuk3();
+//            RunHoofdstuk4();
+//            RunHoofdstuk5();
+//            RunHoofdstuk6();
+//            RunHoofdstuk7();
+//            RunHoofdstuk10();
+            RunHoofdstukLeftovers();
             Console.ReadKey();
         }
 
-        static void RunHoofdstuk1()
+        private static void RunHoofdstuk1()
         {
-            Week_1.Duck model = new ModelDuck();
+            Duck model = new ModelDuck();
             model.PerformFly();
             model.PerformQuack();
             model.SetFlyBehavior(new FlyRocketPowered());
             model.PerformFly();
         }
 
-        static void RunHoofdstuk2()
+        private static void RunHoofdstuk2()
         {
-            WeatherData data = new WeatherData();
+            var data = new WeatherData();
             new CurrentConditionsDisplay(data);
             new StatisticsDisplay(data);
             new ForecastDisplay(data);
             data.Temperature = 22.7;
         }
 
-        static void RunHoofdstuk3()
+        private static void RunHoofdstuk3()
         {
             Beverage beverage = new Espresso();
             Console.WriteLine($"{beverage.GetDescription()} ${beverage.Cost()}");
@@ -47,19 +57,20 @@ namespace DesignPatternsBoekOpdrachten
             beverage1 = new Mocha(beverage1);
             beverage1 = new Whip(beverage1);
             Console.WriteLine($"{beverage1.GetDescription()} ${beverage1.Cost()}");
-
         }
 
-        static void RunHoofdstuk7()
+        private static void RunHoofdstuk7()
         {
-            Week2.Hoofdstuk_7.Duck duck = new Week2.Hoofdstuk_7.Duck();
-            Turkey turkey = new Turkey();
-            TurkeyAdapter adapter = new TurkeyAdapter(turkey);   //Should be of type Duck if duck was the implemented interface. (Duck adapter = new TurkeyAdapter(turkey);
+            var duck = new Week2.Hoofdstuk_7.Duck();
+            var turkey = new Turkey();
+            var adapter =
+                new TurkeyAdapter(
+                    turkey); //Should be of type Duck if duck was the implemented interface. (Duck adapter = new TurkeyAdapter(turkey);
             adapter.Quack();
             adapter.Fly();
         }
 
-        static void RunHoofdstuk4()
+        private static void RunHoofdstuk4()
         {
             Console.WriteLine(@"------------------------------------------------------");
             Console.WriteLine("\tPizza Store Factory Pattern Test");
@@ -80,28 +91,33 @@ namespace DesignPatternsBoekOpdrachten
             Console.WriteLine(@"------------------------------------------------------");
         }
 
-        static void RunHoofdstuk5()
+        private static void RunHoofdstuk5()
         {
-            MySingleton singleton = MySingleton.Instance;
+            var singleton = MySingleton.Instance;
             singleton.PrintText();
             Task.Run(() =>
             {
                 Thread.Sleep(800);
-                MySingleton singleton2 = MySingleton.Instance;
+                var singleton2 = MySingleton.Instance;
                 singleton2.PrintText();
             });
-            MySingleton singleton3 = MySingleton.Instance;
+            var singleton3 = MySingleton.Instance;
             singleton3.PrintText();
         }
 
-        static void RunHoofdstuk6()
+        private static void RunHoofdstuk6()
         {
-            RemoteControlTest test = new RemoteControlTest();
+            var test = new RemoteControlTest();
         }
 
-        static void RunHoofdstuk10()
+        private static void RunHoofdstuk10()
         {
             new GumballMachineTest();
+        }
+
+        private static void RunHoofdstukLeftovers()
+        {
+            new FlyingObjectTest();
         }
     }
 }

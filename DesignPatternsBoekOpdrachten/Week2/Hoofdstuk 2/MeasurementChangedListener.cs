@@ -1,6 +1,6 @@
-﻿namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk2
+﻿namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_2
 {
-    interface IMeasurementChangedListener
+    public interface IMeasurementChangedListener
     {
         void OnMeasurementChanged(WeatherData data);
     }

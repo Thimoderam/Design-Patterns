@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4
+namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.Pizza
 {
     public abstract class VeggiePizza : Pizza
     {

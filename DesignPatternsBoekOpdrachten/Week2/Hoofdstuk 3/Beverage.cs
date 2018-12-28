@@ -1,6 +1,6 @@
 ﻿namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3
 {
-    abstract class Beverage
+    internal abstract class Beverage
     {
         protected string description = "Unknown beverage";
 
@@ -10,6 +10,5 @@
         }
 
         public abstract double Cost();
-
     }
 }

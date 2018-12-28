@@ -2,7 +2,7 @@
 {
     public class GarageDoorCloseCommand : Command
     {
-        private GarageDoor door;
+        private readonly GarageDoor door;
 
         public GarageDoorCloseCommand(GarageDoor door)
         {

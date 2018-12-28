@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7
 {
-    class Duck
+    internal class Duck
     {
         public void Quack()
         {

@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.Pizza;
 
-namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4
+namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.PizzaStore
 {
-    class NYPizzaStore : PizzaStore
+    internal class NYPizzaStore : PizzaStore
     {
-        public override Pizza CreatePizza(string item)
+        protected override Pizza.Pizza CreatePizza(string item)
         {
             switch (item)
             {
@@ -19,8 +16,7 @@ namespace DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4
                 case "Pepperoni":
                     return new NYPepperoniPizza();
                 default: throw new Exception("Unknown Pizza!");
-            } 
+            }
         }
-
     }
 }

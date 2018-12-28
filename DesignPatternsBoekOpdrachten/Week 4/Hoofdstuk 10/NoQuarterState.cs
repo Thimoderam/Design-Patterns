@@ -4,8 +4,8 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
 {
     public class NoQuarterState : State
     {
-        private readonly GumballMachine gumballMachine;
         private const string StateName = "NoQuarterState";
+        private readonly GumballMachine gumballMachine;
 
         public NoQuarterState(GumballMachine gumballMachine)
         {
@@ -32,6 +32,7 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
         {
             Console.WriteLine("You turned, but you need to pay first.");
         }
+
         public override string ToString()
         {
             return StateName;

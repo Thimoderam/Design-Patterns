@@ -4,14 +4,15 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
 {
     public class HasQuarterState : State
     {
+        private const string StateName = "HasQuarterState";
         private readonly GumballMachine gumballMachine;
         private readonly Random randomWinner = new Random();
-        private const string StateName = "HasQuarterState";
 
         public HasQuarterState(GumballMachine gumballMachine)
         {
             this.gumballMachine = gumballMachine;
         }
+
         public void Dispense()
         {
             Console.WriteLine("No gumball dispensed.");
@@ -31,16 +32,11 @@ namespace DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10
         public void TurnCrank()
         {
             Console.WriteLine("You turned....");
-            int winner = randomWinner.Next(0, 10);
-            if ((winner == 2) && (gumballMachine.GetCount() > 1))
-            {
+            var winner = randomWinner.Next(0, 10);
+            if (winner == 2 && gumballMachine.GetCount() > 1)
                 gumballMachine.SetState(gumballMachine.GetWinnerState());
-            }
             else
-            {
                 gumballMachine.SetState(gumballMachine.GetSoldState());
-            }
-
         }
 
         public override string ToString()

@@ -1,15 +1,16 @@
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_2;
-using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3;
-using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7;
 using DesignPatternsBoekOpdrachten.Week_1;
 using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.PizzaStore;
 using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5;
 using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10;
 using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_6;
 using DesignPatternsBoekOpdrachten.Week_5_en_6;
+using DesignPatternsBoekOpdrachten.Week_5_en_6.BuilderPattern;
+using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_2;
+using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3;
+using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_7;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Duck = DesignPatternsBoekOpdrachten.Week_1.Duck;
 
 namespace DesignPatternsBoekOpdrachten
@@ -18,15 +19,16 @@ namespace DesignPatternsBoekOpdrachten
     {
         private static void Main(string[] args)
         {
-//            RunHoofdstuk1();
-//            RunHoofdstuk2();
-//            RunHoofdstuk3();
-//            RunHoofdstuk4();
-//            RunHoofdstuk5();
-//            RunHoofdstuk6();
-//            RunHoofdstuk7();
-//            RunHoofdstuk10();
-            RunHoofdstukLeftovers();
+            //            RunHoofdstuk1();
+            //            RunHoofdstuk2();
+            //            RunHoofdstuk3();
+            //            RunHoofdstuk4();
+            //            RunHoofdstuk5();
+            //            RunHoofdstuk6();
+            //            RunHoofdstuk7();
+            //            RunHoofdstuk10();
+            //RunHoofdstukLeftovers();
+            RunPlaneBuilderTest();
             Console.ReadKey();
         }
 
@@ -118,6 +120,11 @@ namespace DesignPatternsBoekOpdrachten
         private static void RunHoofdstukLeftovers()
         {
             new FlyingObjectTest();
+        }
+
+        private static void RunPlaneBuilderTest()
+        {
+            new PlaneBuilderTest();
         }
     }
 }

@@ -88,6 +88,12 @@
     <Compile Include="Week 4\Hoofdstuk 6\RemoteControl.cs" />
     <Compile Include="Week 4\Hoofdstuk 6\RemoteControlTest.cs" />
     <Compile Include="Week 4\Hoofdstuk 6\SimpleRemoteControl.cs" />
+    <Compile Include="Week 5 en 6\BuilderPattern\AirbusA380Builder.cs" />
+    <Compile Include="Week 5 en 6\BuilderPattern\Cessna172Builder.cs" />
+    <Compile Include="Week 5 en 6\BuilderPattern\Plane.cs" />
+    <Compile Include="Week 5 en 6\BuilderPattern\PlaneBuilder.cs" />
+    <Compile Include="Week 5 en 6\BuilderPattern\PlaneBuilderTest.cs" />
+    <Compile Include="Week 5 en 6\BuilderPattern\PlaneDirector.cs" />
     <Compile Include="Week 5 en 6\FlyingObject.cs" />
     <Compile Include="Week 5 en 6\FlyingObjectBuilder.cs" />
     <Compile Include="Week 5 en 6\FlyingObjectDirector.cs" />

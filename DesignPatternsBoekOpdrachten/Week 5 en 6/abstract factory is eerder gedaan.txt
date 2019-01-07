@@ -1,2 +1,0 @@
-﻿Abstract Factory Pattern is eerder behandeld in hoofdstuk 4.
-Verder worden hier nog de leftovers behandeld.

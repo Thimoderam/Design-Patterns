@@ -3,7 +3,6 @@ using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_4.PizzaStore;
 using DesignPatternsBoekOpdrachten.Week_3.Hoofdstuk_5;
 using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_10;
 using DesignPatternsBoekOpdrachten.Week_4.Hoofdstuk_6;
-using DesignPatternsBoekOpdrachten.Week_5_en_6;
 using DesignPatternsBoekOpdrachten.Week_5_en_6.BuilderPattern;
 using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_2;
 using DesignPatternsBoekOpdrachten.Week2.Hoofdstuk_3;
@@ -19,20 +18,19 @@ namespace DesignPatternsBoekOpdrachten
     {
         private static void Main(string[] args)
         {
-            //            RunHoofdstuk1();
-            //            RunHoofdstuk2();
-            //            RunHoofdstuk3();
-            //            RunHoofdstuk4();
-            //            RunHoofdstuk5();
-            //            RunHoofdstuk6();
-            //            RunHoofdstuk7();
-            //            RunHoofdstuk10();
-            //RunHoofdstukLeftovers();
-            RunPlaneBuilderTest();
+            //RunStrategyPattern();
+            //RunObserverPattern();
+            //RunDecoratorPattern();
+            //RunFactoryPattern();
+            //RunSingletonPattern();
+            //RunCommandPattern();
+            //RunAdapterPattern();
+            //RunStatePattern();
+            RunBuilderPattern();
             Console.ReadKey();
         }
 
-        private static void RunHoofdstuk1()
+        private static void RunStrategyPattern()
         {
             Duck model = new ModelDuck();
             model.PerformFly();
@@ -41,7 +39,7 @@ namespace DesignPatternsBoekOpdrachten
             model.PerformFly();
         }
 
-        private static void RunHoofdstuk2()
+        private static void RunObserverPattern()
         {
             var data = new WeatherData();
             new CurrentConditionsDisplay(data);
@@ -50,7 +48,7 @@ namespace DesignPatternsBoekOpdrachten
             data.Temperature = 22.7;
         }
 
-        private static void RunHoofdstuk3()
+        private static void RunDecoratorPattern()
         {
             Beverage beverage = new Espresso();
             Console.WriteLine($"{beverage.GetDescription()} ${beverage.Cost()}");
@@ -61,7 +59,7 @@ namespace DesignPatternsBoekOpdrachten
             Console.WriteLine($"{beverage1.GetDescription()} ${beverage1.Cost()}");
         }
 
-        private static void RunHoofdstuk7()
+        private static void RunAdapterPattern()
         {
             var duck = new Week2.Hoofdstuk_7.Duck();
             var turkey = new Turkey();
@@ -72,7 +70,7 @@ namespace DesignPatternsBoekOpdrachten
             adapter.Fly();
         }
 
-        private static void RunHoofdstuk4()
+        private static void RunFactoryPattern()
         {
             Console.WriteLine(@"------------------------------------------------------");
             Console.WriteLine("\tPizza Store Factory Pattern Test");
@@ -93,7 +91,7 @@ namespace DesignPatternsBoekOpdrachten
             Console.WriteLine(@"------------------------------------------------------");
         }
 
-        private static void RunHoofdstuk5()
+        private static void RunSingletonPattern()
         {
             var singleton = MySingleton.Instance;
             singleton.PrintText();
@@ -107,22 +105,17 @@ namespace DesignPatternsBoekOpdrachten
             singleton3.PrintText();
         }
 
-        private static void RunHoofdstuk6()
+        private static void RunCommandPattern()
         {
             var test = new RemoteControlTest();
         }
 
-        private static void RunHoofdstuk10()
+        private static void RunStatePattern()
         {
             new GumballMachineTest();
         }
 
-        private static void RunHoofdstukLeftovers()
-        {
-            new FlyingObjectTest();
-        }
-
-        private static void RunPlaneBuilderTest()
+        private static void RunBuilderPattern()
         {
             new PlaneBuilderTest();
         }

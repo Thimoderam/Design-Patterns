@@ -12,7 +12,7 @@ namespace DesignPatternsBoekOpdrachten.Week_5_en_6.BuilderPattern
         public PlaneBuilderTest()
         {
             PlaneDirector director = new PlaneDirector();
-            builder = new Cessna172Builder("PH-MBDR");
+            builder = new Cessna172Builder("PH-CESSNA");
             director.Construct(builder);
             builder.Plane.ShowInfo();
             builder = new AirbusA380Builder("PH-AIRB");

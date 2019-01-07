@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsBoekOpdrachte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsCasusOpdrachten", "DesignPatternsCasusOpdrachten\DesignPatternsCasusOpdrachten.csproj", "{6B792CE1-F3B8-423A-8514-5FDED2728521}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefentoets Design Patterns Januari 2016", "Oefentoets Design Patterns\Oefentoets Design Patterns Januari 2016.csproj", "{F4F6AF02-FF97-4E01-909A-C50D19B1AC44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefentoets Design Patterns April 2016", "Oefentoets Design Patterns 2016\Oefentoets Design Patterns April 2016.csproj", "{A31D5B8A-306A-4B6F-BA6D-13F87B8D0111}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6B792CE1-F3B8-423A-8514-5FDED2728521}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B792CE1-F3B8-423A-8514-5FDED2728521}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B792CE1-F3B8-423A-8514-5FDED2728521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F6AF02-FF97-4E01-909A-C50D19B1AC44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F6AF02-FF97-4E01-909A-C50D19B1AC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F6AF02-FF97-4E01-909A-C50D19B1AC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F6AF02-FF97-4E01-909A-C50D19B1AC44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31D5B8A-306A-4B6F-BA6D-13F87B8D0111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31D5B8A-306A-4B6F-BA6D-13F87B8D0111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31D5B8A-306A-4B6F-BA6D-13F87B8D0111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31D5B8A-306A-4B6F-BA6D-13F87B8D0111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

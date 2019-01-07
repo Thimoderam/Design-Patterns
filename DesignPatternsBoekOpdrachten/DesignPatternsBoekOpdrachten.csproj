@@ -113,5 +113,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Week 1\StrategyPattern\StrategyPatternUml.jpg" />
+    <Content Include="Week 2\AdapterPattern\AdapterPatternUml.jpg" />
+    <Content Include="Week 2\DecoratorPattern\DecoratorPatternUml.jpg" />
+    <Content Include="Week 2\Observer Pattern\ObserverPatternUml.jpg" />
+    <Content Include="Week 3\FactoryPattern\factoryPatternUml.jpg" />
+    <Content Include="Week 3\SingletonPattern\SingletonPattern.jpg" />
+    <Content Include="Week 4\CommandPattern\CommandPatternUml.jpg" />
+    <Content Include="Week 4\StatePattern\StatePatternUml.jpg" />
+    <Content Include="Week 5 en 6\BuilderPattern\BuilderPatternUml.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
